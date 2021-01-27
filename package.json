@@ -14,7 +14,19 @@
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.8.0"
+    "babel-plugin-styled-components": "^1.8.0",
+    "eslint": "^7.18.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "description": "This example features how you use a different styling solution than [styled-jsx](https://github.com/zeit/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fm4teus/whoquiz.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/fm4teus/whoquiz/issues"
+  },
+  "homepage": "https://github.com/fm4teus/whoquiz#readme"
 }

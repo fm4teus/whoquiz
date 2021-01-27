@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 
 const QuizBackground = styled.div`
+  position: relative;
   width: 100%;
   background-size: cover;
   background-position: center;
