@@ -4,25 +4,63 @@
     "description": "Teste os seus conhecimentos sobre a série sem precisar viajar pelo tempo e espaço!",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "image": "",
+        "title": "Quem interpreta o décimo terceiro Doutor?",
         "description": "Essa é pra aquecer",
         "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Will Smith",
+          "Peter Capaldi",
+          "Jodie Whittaker",
+          "Benedict Cumberbatch"
         ]
       },
       {
         "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "title": "Quem se tornou 'A face de Boe'?",
+        "description": "",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "Jack Harkness",
+           "Capitão John",
+           "Donna Noble",
+           "Rick Sanchez"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Qual foi a primeira companheira do Doutor depois do reinício da série em 2005?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+           "Amy Pond",
+           "Rose Tyler",
+           "Donna Noble",
+           "Romana II"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Quem é 'A garota que esperou'?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+           "Donna Noble",
+           "Melody Pond",
+           "River Song",
+           "Amy Pond"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Quem se tornou 'A face de Boe'?",
+        "description": "",
+        "answer": 0,
+        "alternatives": [
+           "Jack Harkness",
+           "Capitão John",
+           "Donna Noble",
+           "Rick Sanchez"
         ]
       }
     ],

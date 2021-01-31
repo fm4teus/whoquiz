@@ -21,13 +21,6 @@ function ResultWidget({ results }) {
         <p>
           Você acertou
           {' '}
-          {/* {results.reduce((somatoriaAtual, resultAtual) => {
-            const isAcerto = resultAtual === true;
-            if (isAcerto) {
-              return somatoriaAtual + 1;
-            }
-            return somatoriaAtual;
-          }, 0)} */}
           {results.filter((x) => x).length}
           {' '}
           perguntas
