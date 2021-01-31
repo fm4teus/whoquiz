@@ -4,7 +4,7 @@
     "description": "Teste os seus conhecimentos sobre a série sem precisar viajar pelo tempo e espaço!",
     "questions": [
       {
-        "image": "",
+        "image": "https://media.giphy.com/media/bBUQPfg7l5kAM/giphy.gif",
         "title": "Quem interpreta o décimo terceiro Doutor?",
         "description": "Essa é pra aquecer",
         "answer": 2,
@@ -16,7 +16,7 @@
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "image": "https://media.giphy.com/media/XZxL7YVJU0lpNgkxcK/giphy.gif",
         "title": "Quem se tornou 'A face de Boe'?",
         "description": "",
         "answer": 0,
@@ -28,7 +28,7 @@
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "image": "https://media.giphy.com/media/3ov9jU4ycPvfrPTsly/giphy.gif",
         "title": "Qual foi a primeira companheira do Doutor depois do reinício da série em 2005?",
         "description": "",
         "answer": 1,
@@ -40,7 +40,7 @@
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "image": "https://media.giphy.com/media/j6675AveMD3FbPIMqp/giphy.gif",
         "title": "Quem é 'A garota que esperou'?",
         "description": "",
         "answer": 3,
@@ -52,15 +52,15 @@
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Quem se tornou 'A face de Boe'?",
+        "image": "https://media.giphy.com/media/zjZRknQhJx5Is/giphy.gif",
+        "title": "Que nome o Master usou para se eleger Primeiro Ministro?",
         "description": "",
-        "answer": 0,
+        "answer": 2,
         "alternatives": [
            "Jack Harkness",
-           "Capitão John",
-           "Donna Noble",
-           "Rick Sanchez"
+           "Rick Sanchez",
+           "Harold Saxon",
+           "Capitão John"
         ]
       }
     ],

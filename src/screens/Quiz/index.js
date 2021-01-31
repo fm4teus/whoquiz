@@ -159,12 +159,15 @@ const screenStates = {
 export default function QuizPage({ externalQuestions, externalBg }) {
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const [results, setResults] = React.useState([]);
-  const [currentQuestion, setCurrentQuestion] = React.useState(0);
+  const totalQuestions = externalQuestions.length;
+  const [currentQuestion, setCurrentQuestion] = React.useState(Math.floor(Math.random()*totalQuestions));
   const questionIndex = currentQuestion;
   const question = externalQuestions[questionIndex];
-  const totalQuestions = externalQuestions.length;
   const bg = externalBg;
-
+  const [countQuestion, setCountQuestion] = React.useState(0);
+  const [questionsAsked, setQuestionsAsked] = React.useState([]);
+  const finalQuestion = 5;
+  
   function addResult(result) {
     // results.push(result);
     setResults([
@@ -186,8 +189,16 @@ export default function QuizPage({ externalQuestions, externalBg }) {
   }, []);
 
   function handleSubmitQuiz() {
-    const nextQuestion = questionIndex + 1;
-    if (nextQuestion < totalQuestions) {
+    setQuestionsAsked([...questionsAsked,currentQuestion])
+    let nextQuestion = Math.floor(Math.random()*totalQuestions);
+    do{
+      console.log(questionsAsked)
+      nextQuestion = Math.floor(Math.random()*totalQuestions);
+    }while(questionsAsked.filter((x)=>(x===nextQuestion)).length != 0 )
+     
+    const nextCountQuestion = countQuestion + 1;
+    if (nextCountQuestion < finalQuestion) {
+      setCountQuestion(nextCountQuestion);
       setCurrentQuestion(nextQuestion);
     } else {
       setScreenState(screenStates.RESULT);
