@@ -4,12 +4,12 @@
 [![projeto](https://img.shields.io/badge/fm4teus-WhoQUIZ-orange)](https://github.com/fm4teus/whoquiz)
 [![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](https://github.com/fm4teus/whoquiz/blob/main/LICENSE)
 
-
-<img src="./screenshots/home.jpg" width="37%" />
-<img style="margin-left:0.5%;" src="./screenshots/home-mobile.jpg" width="10%" />
-<img style="margin-left:0.5%;" src="./screenshots/question-mobile.jpg" width="10%" />
-<img style="margin-left:0.5%;" src="./screenshots/question.jpg" width="37%" />
-
+<div align="middle">
+  <img src="./screenshots/home.jpg" width="37%" />
+  <img style="margin-left:0.5%;" src="./screenshots/home-mobile.jpg" width="10%" />
+  <img style="margin-left:0.5%;" src="./screenshots/question.jpg" width="37%" />
+  <img style="margin-left:0.5%;" src="./screenshots/question-mobile.jpg" width="10%" />
+</div>
 
 ## 📑 About
 
