@@ -5,9 +5,15 @@
 [![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](https://github.com/fm4teus/whoquiz/blob/main/LICENSE)
 
 
+<img src="./screenshots/home.jpg" width="37%" />
+<img style="margin-left:0.5%;" src="./screenshots/home-mobile.jpg" width="10%" />
+<img style="margin-left:0.5%;" src="./screenshots/question-mobile.jpg" width="10%" />
+<img style="margin-left:0.5%;" src="./screenshots/question.jpg" width="37%" />
+
+
 ## 📑 About
 
-Developed during the 2nd edition of [Alura](https://alura.com.br)'s Imersão React and deployed with [Vercel](https://vercel.com/), this quiz tests your knowledge about Doctor Who and it is available at [WhoQUIZ](https://whoquiz.vercel.app/).
+Developed during the 2nd edition of [Alura](https://alura.com.br)'s Imersão React and deployed with [Vercel](https://vercel.com/). This quiz tests your knowledge about Doctor Who and it is available at [WhoQUIZ](https://whoquiz.vercel.app/).
 
 
 ## 📚 Functionality
