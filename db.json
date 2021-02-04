@@ -54,13 +54,49 @@
       {
         "image": "https://media.giphy.com/media/zjZRknQhJx5Is/giphy.gif",
         "title": "Que nome o Master usou para se eleger Primeiro Ministro?",
-        "description": "",
+        "description": "Boris Johnson? 🤔",
         "answer": 2,
         "alternatives": [
-           "Jack Harkness",
-           "Rick Sanchez",
+          "Rick Sanchez",
+          "Jack Harkness",
            "Harold Saxon",
            "Capitão John"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/1Qhq3p6lc0o6c/giphy.gif",
+        "title": "Qual é o planeta natal do Doutor?",
+        "description": "Lar doce lar",
+        "answer": 1,
+        "alternatives": [
+           "Terra",
+           "Gallifrey",
+           "Trenzalore",
+           "Skagra"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/616v5bU8g8dTW/giphy.gif",
+        "title": "Onde o Doutor conheceu River Song?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+           "Em Londres",
+           "Na sua infância em Gallifrey",
+           "Dentro da TARDIS",
+           "Na maior biblioteca do Universo"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/sQmgraDurq0la/giphy.gif",
+        "title": "Qual desses nunca participou de Doctor Who?",
+        "description": "Quem será?",
+        "answer": 1,
+        "alternatives": [
+          "Corey Taylor",
+          "James Franco",
+          "Canton Everett Delaware III",
+          "James Corden"
         ]
       }
     ],

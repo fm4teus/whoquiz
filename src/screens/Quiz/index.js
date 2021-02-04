@@ -7,15 +7,36 @@ import QuizContainer from '../../components/QuizContainer';
 import AlternativesForm from '../../components/AlternativesForm';
 import Button from '../../components/Button';
 import BackLinkArrow from '../../components/BackLinkArrow';
+import {useRouter} from 'next/router'; 
 
 import loadingAnimation from './animations/loading.json';
 
 function ResultWidget({ results }) {
+  const router = useRouter();
+  const name = router.query.name;
   return (
     <Widget>
       <Widget.Header>
-        Tela de Resultado:
+        <h3>
+          {((results.filter((x) => x).length)>3) ?
+            `😀 Mandou bem, ${name}!`
+            : `😬 Poxa ${name}, melhor assistir novamente!`  
+          }
+        </h3>
       </Widget.Header>
+
+      <img
+        alt="Descrição"
+        style={{
+          width: '100%',
+          height: '150px',
+          objectFit: 'cover',
+        }}
+        src={((results.filter((x) => x).length)>3) ? 
+          "https://media.giphy.com/media/MSS0COPq80x68/giphy.gif"
+          : "https://media.giphy.com/media/UsSjjcZzUhZ1Su5pjD/giphy.gif"
+        }
+      />
 
       <Widget.Content>
         <p>
@@ -31,7 +52,7 @@ function ResultWidget({ results }) {
               #
               {index + 1}
               {' '}
-              Resultado:
+              : 
               {result === true
                 ? 'Acertou'
                 : 'Errou'}
@@ -65,7 +86,8 @@ function LoadingWidget() {
 function QuestionWidget({
   question,
   questionIndex,
-  totalQuestions,
+  countQuestion,
+  finalQuestion,
   onSubmit,
   addResult,
 }) {
@@ -91,7 +113,9 @@ function QuestionWidget({
       <Widget.Header>
         <BackLinkArrow href="/" />
         <h3>
-          {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
+          {`Pergunta ${countQuestion + 1} de ${finalQuestion}`}
+          {' '}
+          {`#00${questionIndex + 1}`}
         </h3>
       </Widget.Header>
 
@@ -220,7 +244,8 @@ export default function QuizPage({ externalQuestions, externalBg }) {
           <QuestionWidget
             question={question}
             questionIndex={questionIndex}
-            totalQuestions={totalQuestions}
+            countQuestion={questionData.countQuestion}
+            finalQuestion={finalQuestion}
             onSubmit={handleSubmitQuiz}
             addResult={addResult}
           />
