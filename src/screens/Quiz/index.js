@@ -5,6 +5,7 @@ import QuizLogo from '../../components/QuizLogo';
 import QuizBackground from '../../components/QuizBackground';
 import QuizContainer from '../../components/QuizContainer';
 import AlternativesForm from '../../components/AlternativesForm';
+import GitHubCorner from '../../components/GitHubCorner';
 import Button from '../../components/Button';
 import BackLinkArrow from '../../components/BackLinkArrow';
 import {useRouter} from 'next/router'; 
@@ -255,6 +256,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
         {screenState === screenStates.RESULT && <ResultWidget results={results} />}
       </QuizContainer>
+      <GitHubCorner projectUrl="https://github.com/fm4teus" />
     </QuizBackground>
   );
 }

@@ -11,14 +11,17 @@ Developed during the 2nd edition of [Alura](https://alura.com.br)'s Imersão Rea
 
 
 ## 📚 Functionality
-- to be completed ...
+
+WhoQuiz is a web quiz application. The user can test his knowledge by trying to answer some questions about Doctor Who. These questions are randomly selected from a JSON file that acts like our database. By the end of the test, the user receives his results.
+
+A user can also open another Quiz in the same app. This functionality reads the questions from other JSON using fetch-API. WhoQuiz also exports the db.json so other apps can read and display our questions. 
 
 ## 🛠 Updates
 
 Imersão React was an amazing opportunity to improve my knowledge of some powerful technologies. Nevertheless, there is still a lot of room for improvement. In this section, I'll keep you updated as new features are introduced.
 
-## 🎨 Design
-
+- Questions are now randomly selected from the database. Now the game still interesting even after you've played a couple of times.
+- (✔Solved) There was a bug that prevented the user from select the same alternative from the last question.
 
 
 ## 📥 How to use

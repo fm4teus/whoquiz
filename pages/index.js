@@ -37,8 +37,7 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>
-          AluraQuiz -
-          {db.title}
+          WhoQuiz
         </title>
       </Head>
       <QuizContainer>
