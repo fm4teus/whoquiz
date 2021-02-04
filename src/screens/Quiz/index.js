@@ -75,6 +75,17 @@ function QuestionWidget({
   const isCorrect = selectedAlternative === question.answer;
   const hasAlternativeSelected = selectedAlternative !== undefined;
 
+  function alternativesFormOnSubmit(infosDoEvento){
+    infosDoEvento.preventDefault();
+    setIsQuestionSubmited(true);
+    setTimeout(() => {
+      addResult(isCorrect);
+      setIsQuestionSubmited(false);
+      setSelectedAlternative(undefined);
+      onSubmit();
+    }, 3 * 1000);
+  }
+
   return (
     <Widget>
       <Widget.Header>
@@ -102,16 +113,7 @@ function QuestionWidget({
         </p>
 
         <AlternativesForm
-          onSubmit={(infosDoEvento) => {
-            infosDoEvento.preventDefault();
-            setIsQuestionSubmited(true);
-            setTimeout(() => {
-              addResult(isCorrect);
-              onSubmit();
-              setIsQuestionSubmited(false);
-              setSelectedAlternative(undefined);
-            }, 3 * 1000);
-          }}
+          onSubmit={ (infosDoEvento)=>{alternativesFormOnSubmit(infosDoEvento)} }
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
             const alternativeId = `alternative__${alternativeIndex}`;
@@ -129,7 +131,10 @@ function QuestionWidget({
                   style={{ display: 'none' }}
                   id={alternativeId}
                   name={questionId}
-                  onChange={() => setSelectedAlternative(alternativeIndex)}
+                  onChange={(e) => {
+                    e.target.checked = false;
+                    setSelectedAlternative(alternativeIndex)
+                  }}
                   type="radio"
                 />
                 {alternative}
@@ -160,12 +165,12 @@ export default function QuizPage({ externalQuestions, externalBg }) {
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const [results, setResults] = React.useState([]);
   const totalQuestions = externalQuestions.length;
-  const [currentQuestion, setCurrentQuestion] = React.useState(Math.floor(Math.random()*totalQuestions));
-  const questionIndex = currentQuestion;
-  const question = externalQuestions[questionIndex];
+
   const bg = externalBg;
-  const [countQuestion, setCountQuestion] = React.useState(0);
-  const [questionsAsked, setQuestionsAsked] = React.useState([]);
+  const firstQuestion = Math.floor(Math.random()*totalQuestions);
+  const [questionData, setQuestionData] = React.useState({ questionsAsked: [firstQuestion], countQuestion: 0, currentQuestion: firstQuestion });
+  const questionIndex = questionData.currentQuestion;
+  const question = externalQuestions[questionIndex];
   const finalQuestion = 5;
   
   function addResult(result) {
@@ -189,17 +194,19 @@ export default function QuizPage({ externalQuestions, externalBg }) {
   }, []);
 
   function handleSubmitQuiz() {
-    setQuestionsAsked([...questionsAsked,currentQuestion])
-    let nextQuestion = Math.floor(Math.random()*totalQuestions);
-    do{
-      console.log(questionsAsked)
-      nextQuestion = Math.floor(Math.random()*totalQuestions);
-    }while(questionsAsked.filter((x)=>(x===nextQuestion)).length != 0 )
-     
-    const nextCountQuestion = countQuestion + 1;
+    let nextQuestion;
+    const nextCountQuestion = questionData.countQuestion + 1;
     if (nextCountQuestion < finalQuestion) {
-      setCountQuestion(nextCountQuestion);
-      setCurrentQuestion(nextQuestion);
+      do{
+        nextQuestion = Math.floor(Math.random()*totalQuestions);
+        console.log(questionData.questionsAsked,nextQuestion)
+      }while(questionData.questionsAsked.filter((x)=>(x==nextQuestion)).length != 0 )
+    
+      setQuestionData({
+        countQuestion: nextCountQuestion,
+        questionsAsked: [...questionData.questionsAsked, nextQuestion],
+        currentQuestion: nextQuestion
+      });
     } else {
       setScreenState(screenStates.RESULT);
     }
